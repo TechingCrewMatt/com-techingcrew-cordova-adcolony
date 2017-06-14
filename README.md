@@ -29,7 +29,7 @@ Free and open source Cordova plugin for AdColony rewarded videos.
                 console.log(e);
             }
 
-            function showVideo() {
+            function showVideo([], success, error) {
                 window.adcolony.showVideo();
             }
 
