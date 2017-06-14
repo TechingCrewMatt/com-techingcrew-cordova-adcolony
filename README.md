@@ -26,6 +26,7 @@ Free and open source Cordova plugin for AdColony rewarded videos.
                 onReward Failed
                 adcolony._SUCCESS = true;
             }
+            
             var error = function (e) {
                 console.log(e);
             }
