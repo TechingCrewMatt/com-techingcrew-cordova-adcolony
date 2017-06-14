@@ -2,6 +2,7 @@
 Free and open source Cordova plugin for AdColony rewarded videos.
 
 -Tested on Samsung Galaxy S6 using Android 7.0 and project built using CLI 6.1.1
+-iOS version is in development.
 
 1. Install the plugin
 2. Add the following JavaScript functions to your project.
