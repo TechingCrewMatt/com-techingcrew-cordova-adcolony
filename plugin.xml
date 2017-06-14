@@ -10,8 +10,9 @@
     <js-module name="adcolony" src="www/AdColony.js">
         <clobbers target="adcolony" />
     </js-module>
+    <dependency id="cordova-admobsdk" version="1.0.4"/>
     <platform name="android">
-        <dependency id="cordova-admobsdk" version="1.0.4"/>
+        
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="AdColonyPlugin">
                 <param name="android-package" value="com.TechingCrew.Cordova.AdColonyPlugin.AdColonyPlugin" />
