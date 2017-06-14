@@ -1,5 +1,7 @@
 # com-techingcrew-cordova-adcolony
-Free and open source Cordova plugin for AdColony rewarded videos
+Free and open source Cordova plugin for AdColony rewarded videos.
+
+-Tested on Samsung Galaxy S6 using Android 7.0 and project built using CLI 6.1.1
 
 1. Install the plugin
 2. Add the following JavaScript functions to your project.
