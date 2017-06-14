@@ -21,7 +21,6 @@ Free and open source Cordova plugin for AdColony rewarded videos.
                 if (result === 'onReward Failed'){
                     console.log('Reward video did not complete successfully. The user may have exited the video.');
                 }
-                onReward Failed
                 adcolony._SUCCESS = true;
             }
             
