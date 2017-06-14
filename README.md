@@ -7,9 +7,6 @@ Free and open source Cordova plugin for AdColony rewarded videos.
 1. Install the plugin
 <pre><code>cordova plugin add com-techingcrew-cordova-adcolony</code></pre>
 2. Add the following JavaScript functions to your project.
-3. Replace the arguments in initColony with your development App Id and Zone Id. In production, requests for video ads are not filled as      often as you'd like. Test your implementation with development credentials.
-4. On deviceready call initColony. This initializes AdColony and requests a video to be played by calling showVideo.
-
 <pre>
   <code>
             var success = function (result) {
@@ -46,3 +43,6 @@ Free and open source Cordova plugin for AdColony rewarded videos.
             
   </code>
 </pre>
+3. Replace the arguments in initColony with your development App Id and Zone Id. In production, requests for video ads are not filled as      often as you'd like. Test your implementation with development credentials.
+4. On deviceready call initColony. This initializes AdColony and requests a video to be played by calling showVideo.
+5. Create a link or button that calls showVideo onclick.
