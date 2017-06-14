@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com-techingcrew-cordova-adcolony" version="1.1.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Cordova-Phonegap AdColony</name>
+	<description>Free and open source Cordova plugin for AdColony rewarded videos. No revenue sharing.</description>
+	<author>Matt Kowalski - TechingCrew LLC</author>
+	<license>MIT</license>
+	<keywords>cordova, phonegap, cordova-adcolony, adcolony, rewarded videos</keywords>
+    <repo>https://github.com/TechingCrewMatt/com-techingcrew-cordova-adcolony.git</repo>
+    <issue>https://github.com/TechingCrewMatt/com-techingcrew-cordova-adcolony/issues</issue>
+    <js-module name="adcolony" src="www/AdColony.js">
+        <clobbers target="adcolony" />
+    </js-module>
+    <platform name="android">
+        <dependency id="cordova-admobsdk" version="1.0.4"/>
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="AdColonyPlugin">
+                <param name="android-package" value="com.TechingCrew.Cordova.AdColonyPlugin.AdColonyPlugin" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+		    <uses-permission android:name="android.permission.INTERNET"/>
+		    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	    </config-file>
+
+	    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+		    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.jirbo.adcolony.AdColonyOverlay" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+		    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.jirbo.adcolony.AdColonyFullscreen" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+		    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.jirbo.adcolony.AdColonyBrowser" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+	        <activity android:name="com.adcolony.sdk.AdColonyInterstitialActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+            <activity android:name="com.adcolony.sdk.AdColonyAdViewActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        </config-file>
+        <source-file src="src/android/AdColonyPlugin.java" target-dir="src/com/TechingCrew/Cordova/plugin/AdColony" />
+        <source-file src="src/android/adcolony.jar" target-dir="libs" />
+        <source-file src="src/android/libadcolony.so" target-dir="libs" />
+        <source-file src="src/android/libjs.so" target-dir="libs" />
+        <source-file src="src/android/arm64-v8a/libadcolony.so" target-dir="libs/arm64-v8a" />		
+        <source-file src="src/android/arm64-v8a/libjs.so" target-dir="libs/arm64-v8a" />		
+        <source-file src="src/android/armeabi/libadcolony.so" target-dir="libs/armeabi" />		
+        <source-file src="src/android/armeabi/libjs.so" target-dir="libs/armeabi" />		
+        <source-file src="src/android/armeabi-v7a/libadcolony.so" target-dir="libs/armeabi-v7a" />		
+        <source-file src="src/android/armeabi-v7a/libjs.so" target-dir="libs/armeabi-v7a" />		
+        <source-file src="src/android/x86/libadcolony.so" target-dir="libs/x86" />		
+        <source-file src="src/android/x86/libjs.so" target-dir="libs/x86" />	
+        <source-file src="src/android/x86_64/libadcolony.so" target-dir="libs/x86_64" />		
+        <source-file src="src/android/x86_64/libjs.so" target-dir="libs/x86_64" />	
+        <framework src="src/android/adcolony.gradle" custom="true" type="gradleReference" />      
+    </platform>
+</plugin>

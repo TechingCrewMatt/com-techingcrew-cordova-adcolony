@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-admob",
+  "version": "1.1.1",
+  "description": "Free and open source Cordova plugin for AdColony rewarded videos",
+  "cordova": {
+    "id": "com-techingcrew-cordova-adcolony",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechingCrewMatt/com-techingcrew-cordova-adcolony.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TechingCrewMatt/com-techingcrew-cordova-adcolony/issues"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "phonegap", 
+    "cordova-adcolony", 
+    "adcolony", 
+    "rewarded",
+    "reward",
+    "video",
+    "advertisement",
+    "monetize"
+  ],
+  "author": {
+    "name": "Matt Kowalski - TechingCrew, LLC"
+  },
+  "license": "MIT"
+}
+

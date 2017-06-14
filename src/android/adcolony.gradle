@@ -1,0 +1,14 @@
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  /** Any other dependencies here */
+}
+
+android {
+  /** Any other configurations here */
+
+  sourceSets {
+    main {
+      jniLibs.srcDirs = ['libs']
+    }
+  }
+}
